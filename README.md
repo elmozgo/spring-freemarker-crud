@@ -12,3 +12,12 @@ There are three scripts:
 Make sure you have execution rights and click this link [http://localhost:8080/crud](http://localhost:8080/crud)
 
 License: Copy it and use as you like :-)
+
+To run project with spring-loaded and Jetty maven plugin, directly from Eclipse:
+
+* run: mvn -P development dependency:copy
+* create m2e build with:
+  
+  goal: jetty:run
+
+  additional VM argument: -javaagent:${project_loc}/target/agents/springloaded-1.2.1.RELEASE.jar -noverify
